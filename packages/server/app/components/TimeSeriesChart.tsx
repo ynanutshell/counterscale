@@ -43,7 +43,7 @@ function CustomTooltip(props: any) {
     });
     if (active && payload && payload.length) {
         return (
-            <Card className="p-2 shadow-lg leading-normal">
+            <Card className="p-2 leading-normal">
                 <div className="font-semibold">{formattedDate}</div>
                 <div className="before:content-['•'] before:text-border before:font-bold">
                     {" "}
@@ -172,21 +172,21 @@ export default function TimeSeriesChart({
                 <Area
                     yAxisId="count"
                     dataKey="views"
-                    stroke="#F46A3D"
+                    stroke="#BCCFF2"
                     strokeWidth="2"
-                    fill="#F99C35"
+                    fill="#E9EFF8"
                 />
                 <Area
                     yAxisId="count"
                     dataKey="visitors"
-                    stroke="#F46A3D"
+                    stroke="#A5BDE8"
                     strokeWidth="2"
-                    fill="#f96d3e"
+                    fill="#DDE7F9"
                 />
                 <Line
                     yAxisId="bounceRate"
                     dataKey="bounceRate"
-                    stroke="#56726C"
+                    stroke="#86A4DE"
                     strokeWidth="2"
                     dot={false}
                 />

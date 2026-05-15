@@ -133,7 +133,7 @@ export default function App() {
 
     return (
         <div className="mt-0 sm:mt-4">
-            <header className="border-b-2 mb-8 py-2">
+            <header className="border-b mb-8 py-2">
                 <nav className="flex justify-between items-center">
                     <div className="flex items-center">
                         <a href={homeUrl} className="text-lg font-bold">
@@ -146,13 +146,12 @@ export default function App() {
                         />
                     </div>
                     <div className="flex items-center font-small font-medium text-md">
-                        <a href="/dashboard">Dashboard</a>
                         <a
-                            href="/admin-redirect"
+                            href="https://www.ysabella.me"
                             target="_blank"
                             className="hidden sm:inline-block ml-2"
                         >
-                            Admin
+                            Back to site
                         </a>
                         {(data.user?.authenticated && data.isAuthEnabled) && (
                             <a href="/logout" className="ml-2">
@@ -161,7 +160,7 @@ export default function App() {
                         )}
                         <a
                             href="https://github.com/benvinegar/counterscale"
-                            className="w-6 ml-2"
+                            className="w-6 ml-4"
                         >
                             <img
                                 src="/github-mark.svg"
@@ -177,24 +176,6 @@ export default function App() {
             <main role="main" className="w-full">
                 <Outlet />
             </main>
-
-            <footer className="py-4 flex justify-end text-s">
-                <div>
-                    Version{" "}
-                    {data.version ? (
-                        <a
-                            href={data.version.url as string}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:underline"
-                        >
-                            {data.version.name}
-                        </a>
-                    ) : (
-                        "unknown"
-                    )}
-                </div>
-            </footer>
         </div>
     );
 }

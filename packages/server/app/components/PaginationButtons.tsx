@@ -14,7 +14,7 @@ const PaginationButtons: React.FC<PaginationButtonsProps> = ({
     handlePagination,
 }) => {
     return (
-        <div className="p-2 pr-0 grid grid-cols-[auto,2rem,2rem] text-right">
+        <div className="p-2 pr-0 grid grid-cols-[auto,1.5rem,1.5rem] text-right">
             <div></div>
             <button
                 onClick={() => {
@@ -23,10 +23,10 @@ const PaginationButtons: React.FC<PaginationButtonsProps> = ({
                 className={
                     page > 1
                         ? `text-primary hover:cursor-pointer`
-                        : `text-orange-300`
+                        : `text-primary`
                 }
             >
-                <ArrowLeft />
+                <ArrowLeft size={16} />
             </button>
             <button
                 onClick={() => {
@@ -35,10 +35,10 @@ const PaginationButtons: React.FC<PaginationButtonsProps> = ({
                 className={
                     hasMore
                         ? "text-primary hover:cursor-pointer"
-                        : "text-orange-300"
+                        : "text-primary"
                 }
             >
-                <ArrowRight />
+                <ArrowRight size={16} />
             </button>
         </div>
     );
